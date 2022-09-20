@@ -12,6 +12,8 @@ class BookIdController extends Controller
     public function index()
     {
         $books = Book_id::all();
+//        $categories = Category::all();
+//        dd($categor);
         return view('book.index', compact('books'));
 //        $author = Author_id::where('category_id', 1)->get();
 //        foreach ($books as $Book_id) {
@@ -33,7 +35,7 @@ class BookIdController extends Controller
     {
         $data = request()->validate([
             'book_name' => 'string',
-            'category' => 'integer',
+//            'category' => 'integer',
         ]);
 //        dd($data);
         Book_id::create($data);
@@ -58,7 +60,7 @@ class BookIdController extends Controller
     {
         $data = request()->validate([
             'book_name' => 'string',
-            'category' => 'integer',
+//            'category' => 'integer',
         ]);
         $post->update($data);
         return redirect()->route('book.show', $post->id);

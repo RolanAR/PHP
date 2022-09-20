@@ -14,5 +14,11 @@ class Author_id extends Model
     protected $table = 'author_ids';
     protected $guarded = false;
 
+    public function books()
+    {
+        return $this->hasMany(Book_id::class, 'category', 'id');
+
+    }
+
 
 }

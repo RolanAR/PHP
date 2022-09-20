@@ -27,7 +27,7 @@ class AuthorIdController extends Controller
     {
         $data = request()->validate([
             'author_name' => 'string',
-            'category_id' => 'integer',
+//            'category_id' => 'integer',
         ]);
 //        dd($data);
         Author_id::create($data);
@@ -59,7 +59,7 @@ class AuthorIdController extends Controller
     {
         $data = request()->validate([
         'author_name' => 'string',
-        'category_id' => 'integer',
+//        'category_id' => 'integer',
         ]);
         $post->update($data);
         return redirect()->route('author.show', $post->id);

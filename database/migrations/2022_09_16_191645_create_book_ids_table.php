@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('book_ids', function (Blueprint $table) {
             $table->id();
             $table->string('book_name')->nullable();
-            $table->integer('category')->nullable();
+//            $table->integer('category')->nullable();
+            $table->foreignId('category')->constrained('author_ids');
             $table->timestamps();
 
             $table->softDeletes();

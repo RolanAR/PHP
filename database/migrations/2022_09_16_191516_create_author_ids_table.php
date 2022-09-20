@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('author_ids', function (Blueprint $table) {
             $table->id();
             $table->string('author_name')->nullable();
-            $table->integer('category_id')->nullable();
+//            $table->integer('category_id')->nullable();
             $table->timestamps();
 
             $table->softDeletes();
